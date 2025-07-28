@@ -23,6 +23,8 @@ int main() {
     // Sugestão: Utilize a função scanf para capturar as entradas do usuário para cada atributo.
     // Solicite ao usuário que insira as informações de cada cidade, como o código, nome, população, área, etc.
 
+    //Entrada de dados da carta 1:
+
      printf("Super Trunfo\n\n");
 
      printf("Dados da Carta 1:\n");
@@ -47,6 +49,34 @@ int main() {
 
      printf("Digite a quantidade de pontos turísticos: ");
      scanf("%d", &ponto_turistico1);
+
+     //Entrada de dados da carta 2:
+
+     printf("\nDados da Carta 2:\n");
+
+     getchar();
+
+     printf("Digite o estado: ");
+     fgets(estado2, 20, stdin);
+
+     printf("Digite o código da carta: ");
+     fgets(codigo_carta2, 10, stdin);
+
+     printf("Digite o nome da cidade: ");
+     fgets(nome_cidade2, 30, stdin);
+
+     printf("Digite a população: ");
+     scanf("%d", &populacao2);
+
+     printf("Digite a área: ");
+     scanf("%f", &area2);
+
+     printf("Digite o PIB: ");
+     scanf("%f", &pib2);
+
+     printf("Digite a quantidade de pontos turísticos: ");
+     scanf("%d", &ponto_turistico2);
+
     
     // Exibição dos Dados das Cartas:
     // Sugestão: Utilize a função printf para exibir as informações das cartas cadastradas de forma clara e organizada.
@@ -62,5 +92,15 @@ int main() {
      printf("PIB: %.2f bilhões de reais\n", pib1);
      printf("Número de Pontos Turísticos: %d\n", ponto_turistico1);
 
-    return 0;
+     printf("\n\nCarta 2: \n");
+
+     printf("Estado: %s", estado2);
+     printf("Código: %s", codigo_carta2);
+     printf("Cidade: %s", nome_cidade2);
+     printf("População: %d\n", populacao2);
+     printf("Área: %.2f km²\n", area2);
+     printf("PIB: %.2f bilhões de reais\n", pib2);
+     printf("Número de Pontos Turísticos: %d\n", ponto_turistico2);
+
+     return 0;
 }
