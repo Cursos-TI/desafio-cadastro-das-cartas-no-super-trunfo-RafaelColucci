@@ -20,6 +20,7 @@ int main() {
      int ponto_turistico1, ponto_turistico2;
      float densidade_populacional1, densidade_populacional2;
      float pib_percapita1, pib_percapita2;
+     float superpoder1, superpoder2;
     
     // Cadastro das Cartas:
     // Sugestão: Utilize a função scanf para capturar as entradas do usuário para cada atributo.
@@ -86,6 +87,11 @@ int main() {
 
         pib_percapita1 = pib1 / populacao1;
         pib_percapita2 = pib2 / populacao2;
+
+     //Cálculo de Super Poder.
+
+        superpoder1 = (float) populacao1 + area1 + pib1 + ponto_turistico1 + pib_percapita1 + (1/densidade_populacional1);
+        superpoder2 = (float) populacao2 + area2 + pib2 + ponto_turistico2 + pib_percapita2 + (1/densidade_populacional2);
     
     // Exibição dos Dados das Cartas:
     // Sugestão: Utilize a função printf para exibir as informações das cartas cadastradas de forma clara e organizada.
@@ -102,6 +108,7 @@ int main() {
      printf("Número de Pontos Turísticos: %d\n", ponto_turistico1);
      printf("Densidade Populacional: %.2f habitantes/km²\n", densidade_populacional1);
      printf("PIB per capita: %.2f reais\n", pib_percapita1);
+     printf("Super Poder: %.2f\n", superpoder1);
 
      printf("\n\nCarta 2: \n");
 
@@ -114,6 +121,29 @@ int main() {
      printf("Número de Pontos Turísticos: %d\n", ponto_turistico2);
      printf("Densidade Populacional: %.2f habitantes/km²\n", densidade_populacional2);
      printf("PIB per capita: %.2f reais\n", pib_percapita2);
+     printf("Super Poder: %.2f\n", superpoder2);
+
+    //Comparando as cartas.
+
+     printf("\n\n### Resultado ###\n\n");
+
+     printf("Carta1: \n");
+     printf("População: %d\n", (populacao1 > populacao2));
+     printf("Área: %d\n", (area1 > area2));
+     printf("PIB: %d\n", (pib1 > pib2));
+     printf("Pontos Turísticos: %d\n", (ponto_turistico1 > ponto_turistico2));
+     printf("Densidade Populacional: %d\n", (densidade_populacional1 < densidade_populacional2));
+     printf("PIB per Capita: %d\n", (pib1 > pib2));
+     printf("Super Poder: %d\n", (superpoder1 > superpoder2));
+
+     printf("\nCarta2: \n");
+     printf("População: %d\n", (populacao1 < populacao2));
+     printf("Área: %d\n", (area1 < area2));
+     printf("PIB: %d\n", (pib1 < pib2));
+     printf("Pontos Turísticos: %d\n", (ponto_turistico1 < ponto_turistico2));
+     printf("Densidade Populacional: %d\n", (densidade_populacional1 > densidade_populacional2));
+     printf("PIB per Capita: %d\n", (pib1 < pib2));
+     printf("Super Poder: %d\n", (superpoder1 < superpoder2));
 
      return 0;
 }
